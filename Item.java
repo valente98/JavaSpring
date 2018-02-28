@@ -1,11 +1,12 @@
 package com.example.hello;
 
-public class readInventoryitem {
+public class Item {
     public String name;
     public double pay;
     public double charging;
 
-    public readInventoryitem(String name, double pay, double charging){
+    public Item () {}
+    public Item(String name, double pay, double charging){
         this.name = name;
         this.pay = pay;
         this.charging = charging;

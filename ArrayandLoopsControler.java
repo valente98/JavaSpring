@@ -61,12 +61,17 @@ public class ArrayandLoopsControler {
     @GetMapping("/differenceFromMinimum")
     public ArrayList<Double> differenceFromMinimum (@RequestParam String x){
         String[] list = x.split("\\s");
+
         ArrayList<Double> num_list = new ArrayList<>();
+
         for (String num: list){
             num_list.add(Double.parseDouble(num));
         }
+
         double lowest = Collections.min(num_list);
+
         ArrayList<Double> new_list = new ArrayList<>();
+
         for(double num : num_list){
             new_list.add(num - lowest);
         }
