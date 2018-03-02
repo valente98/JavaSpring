@@ -39,10 +39,9 @@ public class objectControler {
         return true;
     }
 
-    @PostMapping("/movies")
-    public boolean movies(@RequestBody MoviesDTO m){
+    @PostMapping("/movie")
+    public boolean movie(@RequestBody MovieDTO m){
         return m.m1.equals(m.m2);
-
     }
 
 }

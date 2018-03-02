@@ -1,6 +1,7 @@
 package com.example.hello;
 
-public class MoviesDTO {
+public class MovieDTO {
     public Movies m1;
     public Movies m2;
 }
+
