@@ -12,13 +12,13 @@ import java.util.Map;
 public class objectControler {
 
     @GetMapping("/readInventory")
-    public HashMap<String, Item> readInventory(@RequestParam String x){
-        if (x.equals("")){
+    public HashMap<String, Item> readInventory(@RequestParam String x) {
+        if (x.equals("")) {
             return new HashMap();
         }
-        ArrayList<String> items = new ArrayList<>(Arrays.asList( x.split("\n")));
+        ArrayList<String> items = new ArrayList<>(Arrays.asList(x.split("\n")));
         HashMap<String, Item> product = new HashMap();
-        for(int i = 0; i < items.size(); i++){
+        for (int i = 0; i < items.size(); i++) {
             String[] arr = items.get(i).split("\t");
             String name = arr[0];
             double pay = Double.parseDouble(arr[1]);
@@ -30,8 +30,8 @@ public class objectControler {
     }
 
     @PostMapping("/isDollarStore")
-    public boolean isDollarStore(@RequestBody HashMap<String, Item> x){
-        for (Item i: x.values()){
+    public boolean isDollarStore(@RequestBody HashMap<String, Item> x) {
+        for (Item i : x.values()) {
             if (i.charging > 1) {
                 return false;
             }
@@ -40,7 +40,7 @@ public class objectControler {
     }
 
     @PostMapping("/movie")
-    public boolean movie(@RequestBody MovieDTO m){
+    public boolean movie(@RequestBody MovieDTO m) {
         return m.m1.equals(m.m2);
     }
 

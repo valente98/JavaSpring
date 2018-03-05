@@ -33,4 +33,24 @@ public class Movies {
         }
         return false;
     }
+
+    public String moviebycastmember(String member){
+        String movies = "";
+        for (String i: this.cast){
+            if (i.equals(member)){
+                movies += this.toString() + " ";
+                return movies;
+            }
+        }
+        return movies;
+    }
+
+    public String moviebydirector (String director){
+        String movies = "";
+        if (this.director.equals(director)) {
+            movies += this.toString() + " ";
+            return movies;
+        }
+        return movies;
+    }
 }
